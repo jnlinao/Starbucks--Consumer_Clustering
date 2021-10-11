@@ -86,8 +86,6 @@ library(cluster)
 library(NbClust)
 library(factoextra)
 
-#Q1
-## a)
 nrow(starbs) #train:5000; test:1121
 K <- 5000
 N <- nrow(starbs)
@@ -100,21 +98,18 @@ nrow(train)
 test.X <- test[, 1:22]
 test.y <- test[, 24]
 
-## b)
 train.reg1 <- lm(recommend ~ X1 + X2 + X3 + X4 + 
                   X5 + X6 + X7 + X8 + X9 + X10 + 
                   X11 + X12 + X13 + X14 + X15 + X16 + 
                   X17 + X18 + X19 + X20 + X21 + X22, data=train) 
 summary(train.reg1)   
 
-## c)
 test.preds <- as.vector(predict(object=train.reg1, newdata=test.X)) #use model to predict on test set
 test.preds
 
 test.r2  <- rSquared(y=test.y, resid= (test.y - test.preds))
 round(test.r2,4)
 
-#Q2
 attach(train)
 train_re <- cbind.data.frame(recommend, train[, 1:22]) #new dataframe with only X and y 
 
@@ -130,20 +125,16 @@ summary(forward.results)
 
 #difference between original R^2 and new R^2
 0.3547 - 0.3543
-
-#Q3
-## a) 
+ 
 X <- starbs[, 1:22]
 nrow(X)
 ncol(X)
 head(X)
 
-## b)
 # min, max clusters to test: 2,10 ; kmeans method, use euclidean distance
 nb <- NbClust(X, distance="euclidean", min.nc=2, max.nc=10, method="kmeans")
 fviz_nbclust(nb)
 
-## c) 
 #centers: 2; iterations: 1000; nstart = 100
 cluster.results = kmeans(x = X, centers = 2, iter.max=1000, nstart=100)
 
@@ -154,8 +145,7 @@ cluster.numbers
 
 segment_sizes = table(cluster.numbers)
 segment_sizes
-
-## d) 
+ 
 #cluster centers
 cluster.centers <- t(round(cluster.results$centers,2)) 
 cluster.centers #higher segment is segment 1
@@ -163,7 +153,6 @@ satisfied_centers <- cluster.centers[,1]
 
 satisfied_centers
 
-## e) 
 X$cluster <- cluster.results$cluster #add segments to original dataset by segment ID
 X$recommend <- starbs$recommend #add recommend variable to original dataset
 
@@ -188,8 +177,6 @@ avg_all_other_pred
 avg_most_satisfied_pred - avg_all_other_pred #difference of averages
 
 
-
-#Q4
 
 #X1, X2, X7, X8, X10 ++1 
 
