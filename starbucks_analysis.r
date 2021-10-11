@@ -1,4 +1,4 @@
-setwd("/Users/jnlinao/iCloud/UCI_21-22/Summer_'21/BANA_200/Week_1/Homework_I")
+setwd("filepath")
 getwd()
 
 #reading in data
@@ -46,7 +46,7 @@ table(data2$recommend)
 colMeans(data2)
 
 
-setwd("/Users/jnlinao/iCloud/UCI_21-22/Summer_'21/BANA_200/Week_III/HW")
+setwd("filepath")
 starbucks = as.data.frame(read_excel("starbucks_2.xlsx"))
 library(readxl)
 library(ggplot2)
@@ -73,11 +73,11 @@ attach(starbucks2)
 starbucks2
 
 #set working directory 
-setwd("/Users/jnlinao/iCloud/UCI_21-22/Summer_'21/BANA_200/Week_V/Code/Final")
+setwd("filepath")
 options(scipen=999) #remove scientific notation
 
 #load data
-starbs <- read.table("Starbucks HW2 Data.txt", header=T, sep="\t")
+starbs <- read.table("Starbucks Data.txt", header=T, sep="\t")
 head(starbs)
 
 #load packages
