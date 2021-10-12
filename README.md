@@ -1,5 +1,7 @@
 # Starbucks Customer Analysis :coffee:
 
+<img src="/images/logo2.png" width="175" height="125">
+
 ### Use Case: Utilizing consumer survey data to assess market situation of Starbucks perception by end-users. 
 
 ## Business Problem :thought_balloon:
