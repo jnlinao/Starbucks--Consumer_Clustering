@@ -1,13 +1,13 @@
 # Starbucks Customer Analysis :coffee:
 ### Use Case: Utilizing consumer survey data to assess market situation of Starbucks perception by end-users. 
 
-## Business Problem
+## Business Problem :thought_balloon:
 Given a dataset of 22 survey questions ranging from "Overall, how would you rate the beverages served at Starbucks? - Taste" and "How would you rate the Starbucks staff along the following dimensions? - Providing" in addition to other quantitative metrics such as satisfaction score or recommend to a friend scale, **Starbucks would like to find out ways to improve customer perception on their business in order to increase turnover"**. Starbucks would like to receive data-driven business suggestions to aid their decision making in the following ways:
 1. What are the drivers that may affect a customer’s willingness to recommend Starbucks to others?
 2. How can we segment our customers in order to cater respective marketing strategies to each?
 3. What aspects of the business can be improved in order to increase a customer's willingness to recommend the business to others?
 
-## Data Challenges and Approach
+## Data Challenges and Approach :mount_fuji:
 1. What variables can be taken out and what should stay? 
   * Conducted backward and forward selection for variable selection, comparing R^2 for each to decide if variables have an affect on prediction ability.
 2. Predicting recommend score
@@ -15,7 +15,7 @@ Given a dataset of 22 survey questions ranging from "Overall, how would you rate
 3. Segmenting customers
   * Conducted k-means clustering to segment customers into 2 optimal groups - dissatisfied and satisfied customers
  
-## Project Findings
+## Project Findings :mag_right:
 ### P-value
 * Used p-values to make distinctions from significant variables and unimportant ones, in regard to regression analysis
 ### Variable Selection
