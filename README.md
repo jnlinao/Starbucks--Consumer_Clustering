@@ -34,4 +34,4 @@ Another regression was ran however now defining two dummy variables calculated f
 
 ## Project Visualizations
 <img src="/images/vis.png" width="500" height="400">
-<img src="/images/score.png" width="500" height="400">
+<img src="/images/score.png" width="700" height="400">
